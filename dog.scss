@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,100&display=swap');
+
+*{font-family: 'Poppins', sans-serif; margin: 0px; padding: 0px; box-sizing: border-box; outline: none; border: none; text-decoration: none; transition: .2s linear; 
+    text-transform: capitalize;};
+
+$carrot:#e67e22;
+$black:#130f40;
+$white:#fff;
+$light-color:#666;
+$light-bg:#eee;
+$border:.2rem solid $black;
+$box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+
+@mixin grid ($val){
+
+    display: grid; grid-template-columns: repeat(auto-fit , minmax($val , 1fr)); gap: 1.5rem; 
+};
+
+html{scroll-behavior: smooth; overflow-x: hidden; scroll-padding-top: 4rem;  &::-webkit-scrollbar{width: .8rem;};
+    
+    &::-webkit-scrollbar-track{background: transparent}; &::-webkit-scrollbar-thumb{background:$carrot; border-radius: .5rem;}
+};
+
+@keyframes fadeIn {
+    0%{
+      transform: translatex(15rem);
+      opacity: 0;
+    };
+};
+
+  @keyframes fadeIn1 {
+    0%{
+      transform: translatex(15rem);
+      opacity: 0;
+    };
+};
+
+body{height: 1500px;};
+
+//*--------------------------------------------header----------------------------------//
+
+.header{background: $white; display: flex; align-items: center; justify-content: space-between; box-shadow: $box-shadow; left: 0px; top: 0px; right: 0px;
+
+    position: fixed;  padding: 2rem 9%; z-index: 10;  height: 95px; transform: translateY(-100px); &.active{transform: translateY(0px);}
+
+    .logo{font-size: 25px; color: $black; font-weight: bolder; 
+
+        span{color: $carrot;};
+
+        i{color: $carrot; margin-right: 2.5px; font-size: 28px;};
+    };
+
+    .navbar{
+        a{color: $black; font-size: 20px; margin: 0px 10px; width: 10px;
+
+            &:hover{color: $carrot; border-bottom: 2px solid $carrot;};
+        };
+    };
+
+    .icons {
+        
+        a{font-size: 1.3rem; color: $black; margin-left: 1.3rem; cursor: pointer;};
+
+        div{font-size: 1.3rem; color: $black; margin-left: 1.3rem; cursor: pointer;};
+
+        #menu{display: none; font-size: 1.2rem; color: $black; margin-left: 1.3rem; cursor: pointer;};
+         
+        a:hover{color:$carrot;};  div:hover{color:$carrot;};  #menu:hover{color:$carrot;};
+
+    };
+
+    .login-from{position: absolute; top: 120%; right: 2rem; width: 35rem; border-radius: 1rem; background-color: $white; box-shadow: $box-shadow; padding: 20px; width: 500px;
+
+        display: none;   h3{color: $black; font-size: 25px; padding-bottom: .5rem;};  
+        
+        &.active{display: block; animation: fadeIn .4s linear;};
+
+        .box{font-size: 16px; border-bottom: $border; border-width: .1px; width: 100%; padding: 1.5rem 0; margin: .5rem 0; color: $black; text-transform: none;};
+
+        .remember{display: flex; align-items: center; gap: 5px; padding: 10px 0px;}; label{font-size: 15px; cursor: pointer; color: $light-color;};
+
+        .btn{margin-top: 10px; text-align: center; border-radius: 5rem; cursor: pointer; border: 2px solid $black; background-color: transparent;
+            font-size: 1.2rem; color: $black; width: 470px; padding: 5px 10px; margin: 5px -2px;
+
+            &:hover{background-color: $black; color: $white;};
+        };
+
+        .links{display: flex; justify-content: space-between; align-items: center; padding: 10px; margin-top: 1rem; 
+
+            a{color: $carrot; &:hover{color: $black; text-decoration: underline;}};
+        };
+    };
+};
+
+//*-----------------------------------------home--------------------------------------//
+
+.home{min-height: 100vh; display: flex; align-items: center; justify-content: flex-end; background: url(./image/home_bg_img.jpg) no-repeat; background-position: center;
+
+    background-size: cover; position: relative;  z-index: 1;
+
+    .content{width: 46rem; margin-right:40px; margin-top: -55px;
+        
+        h3{font-size: 4.4rem; color:$white; padding-bottom: 1rem;  span{color: $carrot;}}
+        
+        .btn{text-align: center; border-radius: 5rem; border-top-left-radius:0px; cursor: pointer; border: 2px solid $white;
+            font-size: 1.5rem; color: $white;  padding: 8px 20px; 
+
+            &:hover{color: $carrot; border: 2px solid $carrot;}
+        };
+    };
+    .wave{position: absolute; width: 100%; bottom: 0; left: 0; height: 10rem;}
+};
+
+
+//*------------------------------------about----------------------------------------//
+
+.about{display: flex; align-items: center; flex-wrap: wrap; gap: 2rem;
+
+    .imges{flex: 1 1 40rem;  margin-left: 100px;
+        
+        img{width: 100%;};
+    };
+
+    .content{flex: 1 1 40rem;
+
+        h3{font-size: 55px; color: $black; 
+
+            span{color: $carrot;};
+        };
+        .parg{font-size: 19px; width: 650px; line-height: 1.8; padding: 1rem 0;  transition: .5s; height: 90px; overflow: hidden;
+
+            &.active{overflow: visible; height: 150px; animation:.4s linear;};
+        };
+
+        .btnn{color: $carrot; border:2px solid $carrot; border-radius: 10rem; border-top-left-radius: 0px; text-align: center; padding: 9px; font-size: 20px;
+            background-color: transparent; cursor: pointer;  
+
+            &.active{display: none;}
+
+            &:hover{color: $white; background-color: $carrot;};
+        };
+        .btno{color: $carrot; border:2px solid $carrot; border-radius: 10rem; border-top-left-radius: 0px; text-align: center; padding: 9px; font-size: 20px;
+            
+            background-color: transparent; cursor: pointer; display: none;
+
+            &.active{display: block;}
+           
+            &:hover{color: $white; background-color: $carrot;};
+        };    
+    }; 
+};
+
+//*-----------------------------------dog & cat /food---------------------------------------//
+
+.dog-food , .cat-food{display: flex; align-items: center; flex-wrap: wrap; padding: 2rem 0px; width: 100%;
+    
+    .imgs{flex: 1 1 40rem;
+    
+        img{width: 100%;};
+    };
+  
+    .content{flex: 1 1 40rem; text-align: center; padding: 2rem;
+    
+        h3{font-size: 40px; color: $black;
+        
+            span{color: $carrot;};
+        };
+
+        p{font-size: 18px; padding: 8px 0px; color: $light-color;};
+
+        .prices{font-size: 33px; color: $carrot;};
+
+        a{
+            img{height: 10rem; margin: 1rem;  &:hover{transform: rotate(12.5deg);}};
+        };
+    };
+}
+
+.cat-food{flex-wrap: wrap-reverse;};
+
+
+//*-----------------------------------shop-----------------------------------------------//
+
+.title{font-size: 40px; color: $black; text-align: center; padding-bottom: 2rem; span{color: $carrot;}};
+
+.shop .box-container{@include grid(30rem); margin-left: 30px;
+
+    .box{position: relative; overflow: hidden;
+    
+        .img{width: 100%; height: 45rem; overflow: hidden;
+        
+            img{width: 100%; height: 100%; object-fit: cover;};
+        };
+    };
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//*--------------------------------media--------------------------------//
+
+@media (max-width:991px){
+
+    .header{padding: 1.3rem;};
+
+    .home{
+
+        .content{width: 25rem; margin-right:60px; margin-top: -55px;
+        
+            h3{font-size: 2.5rem;};
+
+            .btn{font-size: 1.1rem;}
+        };
+
+        .wave{height: 6rem;}
+    };
+
+    .about{width: 85%;
+
+
+        .content{
+            h3{font-size: 50px;};
+        }
+    }
+
+
+};
+
+@media (max-width:760px){
+
+    .header{padding: .8rem;
+
+        .navbar{
+            a{color: $black; font-size: 18px; margin: 0px 10px; width: 5px;};
+        };
+
+        .logo {font-size: 22px; i{font-size: 22px;};
+        };
+
+        .icons a , .icons div  {font-size: 1.1rem;  margin-left: 1rem;  
+        };
+    };
+
+    .login-from{width: 20rem;};
+
+    .home{
+
+        .content{width: 20rem; margin-right:50px; margin-top: -55px;
+        
+            h3{font-size: 2.5rem;}; 
+        };
+    };
+
+    .about{width: 90%; gap: -2rem;
+
+        .content{ padding: 0px 15px;
+            h3{font-size: 47px;};
+
+            .parg{font-size: 16px; height: 80px; width: 550px;}
+        }
+    };
+};
+
+
+@media (max-width:450px) {
+
+    html{width: 100%;}
+
+    .header{padding: .8rem;
+
+        .navbar{position: absolute; top:99%; left:0; right:0; background: $carrot; display: none;
+            
+            a{display: block; margin: 10px 0px; padding: 0px 13px; color: $white; &:hover{background-color: $black; width: 100%;}};
+
+            &.active{display: inline-block; animation:fadeIn1 .5s linear;};
+        };
+
+        .logo {font-size: 22px; i{font-size: 22px;};
+        };
+
+        .icons{font-size: 1.1rem;  margin-left: 1rem;  #menu{display: inline-block;};
+        };
+
+        .login-from{width: 90%; right: 1rem; font-size: 13px;
+
+            .box{font-size: 13px;}
+            
+            .btn{width: 95%; margin: 7px 6px; font-size: 15px;}
+        };
+    };
+
+    .home{justify-content: center; background-position: right;
+
+        .content{width: 21rem; text-align: center; margin-left: 25px; padding-bottom: 5rem; 
+        
+            h3{font-size: 2.4rem;};
+        };
+
+        .wave{height: 3rem;};
+    };
+
+    .about{ 
+
+        .imges{margin-left: 40px; width: 85%;}
+
+        .content{padding: 0px 0px;
+
+            h3{font-size: 30px; width: 350px;};
+
+            .parg{padding: 5px 0px; font-size: 14px; width: 345px; height: 60px; &.active{height: 170px;}};
+
+            .btnn{font-size: 16px;}; .btno{font-size: 16px;} 
+        };
+    };
+}
