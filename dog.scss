@@ -35,13 +35,13 @@ html{scroll-behavior: smooth; overflow-x: hidden; scroll-padding-top: 4rem;  &::
     };
 };
 
-body{height: 1500px;};
+body{overflow: hidden;};
 
 //*--------------------------------------------header----------------------------------//
 
 .header{background: $white; display: flex; align-items: center; justify-content: space-between; box-shadow: $box-shadow; left: 0px; top: 0px; right: 0px;
 
-    position: fixed;  padding: 2rem 9%; z-index: 10;  height: 95px; transform: translateY(-100px); &.active{transform: translateY(0px);}
+    position: fixed;  padding: 2rem 9%; z-index: 15;  height: 95px; transform: translateY(-100px); &.active{transform: translateY(0px);}
 
     .logo{font-size: 25px; color: $black; font-weight: bolder; 
 
@@ -168,10 +168,10 @@ body{height: 1500px;};
 
         p{font-size: 18px; padding: 8px 0px; color: $light-color;};
 
-        .prices{font-size: 33px; color: $carrot;};
+        .prices{font-size: 25px; color: $carrot;};
 
         a{
-            img{height: 10rem; margin: 1rem;  &:hover{transform: rotate(12.5deg);}};
+            img{height: 9rem; margin: 1rem;  &:hover{transform: rotate(12.5deg);}};
         };
     };
 }
@@ -183,20 +183,18 @@ body{height: 1500px;};
 
 .title{font-size: 40px; color: $black; text-align: center; padding-bottom: 2rem; span{color: $carrot;}};
 
-.shop .box-container{@include grid(30rem); margin: 0px 170px;
+.shop .box-container{display: grid; grid-template-columns: repeat(3 , 1fr); justify-content: center; align-self: center;
 
-    .box{position: relative; overflow: hidden; 
+    .box{position: relative; overflow: hidden; margin-left: 90px;
 
         &:hover{
-
-            .img img{border-left:5px $carrot solid;}
 
             .icons{transform: translateY(190px);};
         };
     
-        .img{width: 80%; height: 35rem; overflow: hidden;
+        .img{width: 80%; height: 35rem; 
         
-            img{width: 100%; height: 100%; object-fit: cover; border-radius: 3px; transition: .2s linear; color: $carrot;};
+            img{width: 100%; height: 100%; object-fit: cover; border-radius: 10px; transition: .2s linear; color: $carrot;};
         };
 
        .icons{position: absolute; top: 1rem; left:.7rem; z-index: 10;
@@ -205,22 +203,30 @@ body{height: 1500px;};
                 
                 margin-top: 15px; font-size: 19px; border-radius: 5px;  margin-left: 5px; transform: translateY(-190px); display: block;
 
-                transition: .3s linear;
-            }
+                transition: .3s linear;   &:hover{background-color: $carrot; color: $white;;}
+            };
+        };
+
+        .content{padding: 10px 0px;
+        
+            a{font-size: 21px; color: $carrot; font-weight: 600;};
+
+            .prices{color: $light-color;};
         }
     };
 };
 
 
 
+//*---------------------------------services------------------------------------------//
 
+.services .box-container{display: grid; grid-template-columns: repeat(3 , 100px); gap: 20px; justify-content: center;
 
+    .box{
 
-
-
-
-
-
+        .btnn{};
+    };
+}
 
 
 
@@ -256,6 +262,12 @@ body{height: 1500px;};
         }
     }
 
+    .shop .box-container{
+
+        .box{width: 90%; margin: 0px 15px;
+            .img{ width: 100%; height: 30rem; }
+        }
+    }
 
 };
 
@@ -292,6 +304,13 @@ body{height: 1500px;};
             .parg{font-size: 16px; height: 80px; width: 550px;}
         }
     };
+
+    .shop .box-container{display: grid; grid-template-columns: repeat(2 , 1fr);
+
+        .box{width: 90%; margin: 0px 15px;
+            .img{ width: 100%; height: 30rem; }
+        }
+    }
 };
 
 
@@ -343,6 +362,14 @@ body{height: 1500px;};
             .parg{padding: 5px 0px; font-size: 14px; width: 345px; height: 60px; &.active{height: 170px;}};
 
             .btnn{font-size: 16px;}; .btno{font-size: 16px;} 
+        };
+    };
+
+    .shop .box-container{display: grid; grid-template-columns: repeat(1 , 1fr);
+    
+        .box{width: 100%; margin: 0px 0px; margin-left: 40px;
+        
+            .img{width: 75%; height: 25rem;}
         };
     };
 }
