@@ -220,15 +220,58 @@ body{overflow: hidden;};
 
 //*---------------------------------services------------------------------------------//
 
-.services .box-container{display: grid; grid-template-columns: repeat(3 , 100px); gap: 20px; justify-content: center;
+.service .box-container{display: grid; grid-template-columns: repeat(3 , 100px); column-gap: 300px; row-gap: 20px; justify-content: center; 
 
-    .box{
+    .box{background-color: $light-bg; text-align: center; padding: 3rem; width: 350px; margin-left: -120px; 
+        border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
 
-        .btnn{};
+        &:nth-child(even){border-radius: 79% 21% 81% 19% / 58% 93% 7% 42%;};
+
+        &:hover{border-radius: 10px;}
+
+        i{font-size: 32px; color: $white; background-color: $carrot; width: 5rem; height: 5rem; border-radius: 50%; line-height: 5rem;};
+
+        h3{padding: 2rem 0rem; font-size: 23px; color: $black;};
+
+        .btnn{color: $black; border:2px solid $black; border-radius: 10rem; border-top-left-radius: 0px; text-align: center; padding: 9px; font-size: 20px;
+            background-color: transparent; cursor: pointer; &:hover{color: $white; background-color: $black;};};
     };
 }
 
 
+//*--------------------------------plan----------------------------------------------//
+
+.plan .box-container{display: flex; flex-wrap: wrap; justify-content: center; gap: 35px; text-align: center;
+
+    .title{};
+
+    .box{width: 400px; height: 690px; background-color: $light-bg; border-radius: 10px;
+    
+        .head{color: $carrot; font-size: 33px; padding-top: 20px;};
+
+        .day{color: $black; padding-top: 10px; font-size: 28px};
+
+        i{font-size: 25px; padding-top: 20px; height: 4rem; width: 4rem; border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+            
+            background-color: $carrot; color: white; margin-top: 20px;};
+        
+        .list{color: $carrot; font-size: 22px; padding: 30px 0px; line-height: 3;
+        
+            span{color: $black;}
+        };
+
+        .prices{font-size: 25px; color: $white; height: 3rem; width: 25rem; background-color: $carrot; padding: 8px 0px; margin-bottom: 5px;
+        
+            span{color: $black; font-size: 25px;};
+        };
+
+        .text{font-size: 22px; color: $white; width: 150px; height: 3.5rem; border-radius: 15px; text-align: center; background-color: $black;
+        
+            margin-top: 20px; cursor: pointer; &:hover{background-color: $white; color: $black; border: 2px solid $black;}
+        }; 
+
+    };
+};
 
 
 
@@ -267,6 +310,11 @@ body{overflow: hidden;};
         .box{width: 90%; margin: 0px 15px;
             .img{ width: 100%; height: 30rem; }
         }
+    }
+
+    .service .box-container{grid-template-columns: repeat(3 , 50px); column-gap: 250px; row-gap: 35px;
+
+        .box{width: 280px;}
     }
 
 };
@@ -310,6 +358,11 @@ body{overflow: hidden;};
         .box{width: 90%; margin: 0px 15px;
             .img{ width: 100%; height: 30rem; }
         }
+    }
+
+    .service .box-container{grid-template-columns: repeat(2 , 75px); column-gap: 250px; row-gap: 35px;
+
+        .box{width: 280px;}
     }
 };
 
@@ -372,4 +425,9 @@ body{overflow: hidden;};
             .img{width: 75%; height: 25rem;}
         };
     };
+
+    .service .box-container{grid-template-columns: repeat(1 , 50px); column-gap: 250px; row-gap: 35px;
+
+        .box{width: 280px;}
+    }
 }
