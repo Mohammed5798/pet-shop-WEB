@@ -54,6 +54,7 @@ html::-webkit-scrollbar-thumb {
 }
 body {
   overflow: hidden;
+  height: 7020px;
 }
 
 .header {
@@ -494,12 +495,18 @@ body {
   background-color: #130f40;
 }
 
+.title {
+  font-weight: bold;
+  padding: 30px 0px;
+}
+
 .plan .box-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 35px;
   text-align: center;
+  padding: 40px 0px;
 }
 .plan .box-container .box {
   width: 400px;
@@ -518,7 +525,7 @@ body {
   font-size: 28px;
 }
 .plan .box-container .box i {
-  font-size: 25px;
+  font-size: 27px;
   padding-top: 20px;
   height: 4rem;
   width: 4rem;
@@ -564,6 +571,99 @@ body {
   background-color: #fff;
   color: #130f40;
   border: 2px solid #130f40;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  padding: 2rem 0rem;
+}
+.contact .images {
+  flex: 1 1 40rem;
+}
+.contact .images img {
+  width: 100%;
+}
+.contact .box {
+  flex: 1 1 40rem;
+  padding: 5px 7%;
+}
+.contact .box .contact-title {
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #130f40;
+}
+.contact .box .contact-title span {
+  color: #e67e22;
+}
+.contact .box input {
+  width: 500px;
+  padding: 30px 0px;
+  font-size: 18.5px;
+  border-bottom: 2px solid #130f40;
+  color: #e67e22;
+}
+.contact .box .submit {
+  display: flex;
+  font-size: 20px;
+  color: #fff;
+  width: 515px;
+  height: 3.5rem;
+  border-radius: 15px;
+  text-align: center;
+  background-color: #130f40;
+  margin-top: 80px;
+  padding: 0px 185px;
+  cursor: pointer;
+}
+.contact .box .submit:hover {
+  background-color: #fff;
+  color: #130f40;
+  border: 2px solid #130f40;
+}
+
+.footer {
+  height: 330px;
+  position: relative;
+  background: url(./image/footer_background.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 10rem;
+  margin-bottom: 2rem;
+}
+.footer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10rem;
+  width: 100%;
+}
+.footer .share {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer .share .btn {
+  color: #fff;
+  font-size: 23px;
+  margin-left: 30px;
+}
+.footer .share .btn i {
+  margin-right: 10px;
+}
+.footer .share .btn:hover {
+  border-bottom: 1.5px solid #fff;
+}
+.footer .credit {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 22px;
+  color: #fff;
+}
+.footer .credit span {
+  color: #e67e22;
 }
 
 @media (max-width: 991px) {
@@ -795,5 +895,12 @@ body {
   }
   .service .box-container .box {
     width: 280px;
+  }
+  .contact .box input {
+    width: 300px;
+  }
+  .contact .box .submit {
+    width: 300px;
+    padding: 0px 85px;
   }
 }
