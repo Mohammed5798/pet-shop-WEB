@@ -667,6 +667,9 @@ body {
 }
 
 @media (max-width: 991px) {
+  body {
+    height: 9200px;
+  }
   .header {
     padding: 1.3rem;
   }
@@ -709,6 +712,9 @@ body {
   }
 }
 @media (max-width: 760px) {
+  body {
+    height: 10140px;
+  }
   .header {
     padding: 0.8rem;
   }
@@ -779,6 +785,9 @@ body {
 @media (max-width: 450px) {
   html {
     width: 100%;
+  }
+  body {
+    height: 11740px;
   }
   .header {
     padding: 0.8rem;
@@ -902,5 +911,11 @@ body {
   .contact .box .submit {
     width: 300px;
     padding: 0px 85px;
+  }
+  .footer .share .btn {
+    font-size: 17px;
+  }
+  .footer .credit {
+    font-size: 18px;
   }
 }
