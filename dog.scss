@@ -35,7 +35,7 @@ html{scroll-behavior: smooth; overflow-x: hidden; scroll-padding-top: 4rem;  &::
     };
 };
 
-body{overflow: hidden; height: 7020px;};
+body{overflow: hidden; height: 6650px;};
 
 //*--------------------------------------------header----------------------------------//
 
@@ -66,12 +66,11 @@ body{overflow: hidden; height: 7020px;};
         #menu{display: none; font-size: 1.2rem; color: $black; margin-left: 1.3rem; cursor: pointer;};
          
         a:hover{color:$carrot;};  div:hover{color:$carrot;};  #menu:hover{color:$carrot;};
-
     };
 
     .login-from{position: absolute; top: 120%; right: 2rem; width: 35rem; border-radius: 1rem; background-color: $white; box-shadow: $box-shadow; padding: 20px; width: 500px;
 
-        display: none;   h3{color: $black; font-size: 25px; padding-bottom: .5rem;};  
+        display: none;  h3{color: $black; font-size: 25px; padding-bottom: .5rem;};  
         
         &.active{display: block; animation: fadeIn .4s linear;};
 
@@ -127,19 +126,19 @@ body{overflow: hidden; height: 7020px;};
 
             span{color: $carrot;};
         };
-        .parg{font-size: 19px; width: 650px; line-height: 1.8; padding: 1rem 0;  transition: .5s; height: 90px; overflow: hidden;
+        .paragraph{font-size: 19px; width: 650px; line-height: 1.8; padding: 1rem 0;  transition: .5s; height: 90px; overflow: hidden;
 
             &.active{overflow: visible; height: 150px; animation:.4s linear;};
         };
 
-        .btnn{color: $carrot; border:2px solid $carrot; border-radius: 10rem; border-top-left-radius: 0px; text-align: center; padding: 9px; font-size: 20px;
+        .button1{color: $carrot; border:2px solid $carrot; border-radius: 10rem; border-top-left-radius: 0px; text-align: center; padding: 9px; font-size: 20px;
             background-color: transparent; cursor: pointer;  
 
             &.active{display: none;}
 
             &:hover{color: $white; background-color: $carrot;};
         };
-        .btno{color: $carrot; border:2px solid $carrot; border-radius: 10rem; border-top-left-radius: 0px; text-align: center; padding: 9px; font-size: 20px;
+        .button2{color: $carrot; border:2px solid $carrot; border-radius: 10rem; border-top-left-radius: 0px; text-align: center; padding: 9px; font-size: 20px;
             
             background-color: transparent; cursor: pointer; display: none;
 
@@ -316,8 +315,6 @@ body{overflow: hidden; height: 7020px;};
         span{color: $carrot;};
     };
 };
-
-
 
 //*--------------------------------media--------------------------------//
 

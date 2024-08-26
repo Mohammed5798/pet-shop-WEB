@@ -27,20 +27,7 @@ html::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
 }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    transform: translatex(15rem);
-    opacity: 0;
-  }
-}
-
 @keyframes fadeIn {
-  0% {
-    transform: translatex(15rem);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes fadeIn1 {
   0% {
     transform: translatex(15rem);
     opacity: 0;
@@ -54,7 +41,7 @@ html::-webkit-scrollbar-thumb {
 }
 body {
   overflow: hidden;
-  height: 7020px;
+  height: 6650px;
 }
 
 .header {
@@ -145,8 +132,7 @@ body {
 }
 .header .login-from.active {
   display: block;
-  -webkit-animation: fadeIn 0.4s linear;
-          animation: fadeIn 0.4s linear;
+  animation: fadeIn 0.4s linear;
 }
 .header .login-from .box {
   font-size: 16px;
@@ -270,7 +256,7 @@ body {
 .about .content h3 span {
   color: #e67e22;
 }
-.about .content .parg {
+.about .content .paragraph {
   font-size: 19px;
   width: 650px;
   line-height: 1.8;
@@ -279,13 +265,12 @@ body {
   height: 90px;
   overflow: hidden;
 }
-.about .content .parg.active {
+.about .content .paragraph.active {
   overflow: visible;
   height: 150px;
-  -webkit-animation: 0.4s linear;
-          animation: 0.4s linear;
+  animation: 0.4s linear;
 }
-.about .content .btnn {
+.about .content .button1 {
   color: #e67e22;
   border: 2px solid #e67e22;
   border-radius: 10rem;
@@ -296,14 +281,14 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
-.about .content .btnn.active {
+.about .content .button1.active {
   display: none;
 }
-.about .content .btnn:hover {
+.about .content .button1:hover {
   color: #fff;
   background-color: #e67e22;
 }
-.about .content .btno {
+.about .content .button2 {
   color: #e67e22;
   border: 2px solid #e67e22;
   border-radius: 10rem;
@@ -315,10 +300,10 @@ body {
   cursor: pointer;
   display: none;
 }
-.about .content .btno.active {
+.about .content .button2.active {
   display: block;
 }
-.about .content .btno:hover {
+.about .content .button2:hover {
   color: #fff;
   background-color: #e67e22;
 }
@@ -812,8 +797,7 @@ body {
   }
   .header .navbar.active {
     display: inline-block;
-    -webkit-animation: fadeIn1 0.5s linear;
-            animation: fadeIn1 0.5s linear;
+    animation: fadeIn1 0.5s linear;
   }
   .header .logo {
     font-size: 22px;

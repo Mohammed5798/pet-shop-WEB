@@ -12,30 +12,50 @@ window.onscroll = () => {
 
 //*--------------display-page----------------
 
-let button = document.querySelector(".header .icons #login-btn")?.addEventListener("click" , ()=>{
+let button = document.querySelector("#login-btn") as HTMLButtonElement;
+let page = document.querySelector(".header .login-from")!;
+
+button.onclick  = ()=>{
 
     page?.classList.toggle("active");
 
     navbar?.classList.remove("active");
-})
+};
 
-let page = document.querySelector(".header .login-from")!;
 
 //*--------------read-more-------------------
-let parg = document.querySelector(".about .content .parg")!;
+// let parg = document.querySelector(".about .content .parg");
 
-let btnn = document.querySelector(".about .content .btnn")?.addEventListener("click" , () => {
+// let btno = document.querySelector(".about .content .btno")!.addEventListener("click" , () => {
 
-    parg?.classList.add("active");
+//     parg.classList.remove("active");
+// })
+// let btnn = document.querySelector(".about .content .btnn")?.addEventListener("click" , () => {
 
-    btno?.classList.add("active");
+//     parg.classList.add("active");
 
-    //btnn?.classList.remove("active")
+//     btno.classList.add("active");
+
+    // btnn?.classList.remove("active")
+// })
+
+
+let paragraph = document.querySelector(".paragraph") as HTMLParagraphElement;
+
+let button_readMore = document.querySelector(".button1") as HTMLInputElement;
+
+let button_readLess = document.querySelector(".button2") as HTMLInputElement;
+
+button_readMore.addEventListener("click", ()=>{
+    paragraph.classList.add("active");
+    button_readMore.classList.add("active");
+    button_readLess.classList.add("active")
 })
 
-let btno = document.querySelector(".about .content .btno")?.addEventListener("click" , () => {
-
-    parg?.classList.remove("active");
+button_readLess.addEventListener("click", ()=>{
+    paragraph.classList.remove("active");
+    button_readMore.classList.remove("active");
+    button_readLess.classList.remove("active");
 })
 
 
